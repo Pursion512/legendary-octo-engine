@@ -157,3 +157,19 @@ header {
     width: 100%;
     background-image:url('/images/dog.jpg');
 }
+.zagolovok {
+    font-size: 40px;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.shop {
+    width: 100%;
+}
+.tovar img{
+    height:300px;
+    width: 300px;
+}

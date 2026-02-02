@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bungee&display=swap');
+
+header {
+    height: 100px;
+    width: 100%;
+    font-size: 40px;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    padding: 30px 0;
+}
+
+/*Бургер*/
+
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-top: 60px;
+        }
+
+        /* Кнопка гамбургера */
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border: none;
+            border-radius: 100%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            padding: 8px;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .menu-btn span {
+            display: block;
+            width: 24px;
+            height: 3px;
+            background: black;
+            transition: 0.3s;
+        }
+
+        /* Скрываем чекбокс */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Когда чекбокс отмечен - меняем иконку */
+        #menu-toggle:checked ~ .menu-btn span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        #menu-toggle:checked ~ .menu-btn span:nth-child(2) {
+            opacity: 0;
+        }
+
+        #menu-toggle:checked ~ .menu-btn span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Само меню */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            background: #222;
+            color: white;
+            padding: 80px 20px 20px;
+            transition: right 0.3s ease;
+            z-index: 1000;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        }
+
+        /* Когда чекбокс отмечен - показываем меню */
+        #menu-toggle:checked ~ .sidebar {
+            right: 0;
+        }
+
+        /* Список меню */
+        .menu-list {
+            list-style: none;
+        }
+
+        .menu-list li {
+            margin: 15px 0;
+        }
+
+        .menu-list a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            display: block;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .menu-list a:hover {
+            background: #444;
+        }
+
+        /* Затемнение фона */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        #menu-toggle:checked ~ .overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Контент страницы */
+        .content {
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+/*-------------------------------------------------------------*/
+
+
+.fon {
+    height: 95vh;
+    width: 100%;
+    background-image:url('/images/dog.jpg');
+}

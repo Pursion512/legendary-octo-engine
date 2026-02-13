@@ -3,55 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Главная страница</title>
+    <title>Валентинка</title>
 </head>
 <body>
-    <header>
-        <b>NEON F1</b>
-        <!-- Чекбокс для управления состоянием меню -->
-        <input type="checkbox" id="menu-toggle">
-            <!-- Кнопка меню -->
-        <label for="menu-toggle" class="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <!-- Выдвижное меню -->
-        <nav class="sidebar">
-            <ul class="menu-list">
-                <li><a href="https://legendary-octo-engine-theta.vercel.app/">Главная</a></li>
-                <li><a href="https://web.telegram.org/k/">О нас</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Портфолио</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </nav>
+    <div>Ты будешь моей валентинкой???</div>
+    <img src="love.gif" alt="" class="love">
+    <img src="heart.jpg" alt="" class="hearts">
+    <b><i>ЛЮБЛЮ ТЕБЯ!</i></b>
+<style>
     
-        <!-- Затемнение фона -->
-        <div class="overlay"></div>
-    </header>
-      
-    <div class="fon"></div>
-    <div class="zagolovok"><b>NEON TRACK</b></div>
-    <div class="shop">
-        <div class="tovar">
-            <img src="/images/first.jpeg" alt="">
-            <button>В корзину</button>
-        </div>
-        <div>
+    div {
+        height: 400px;
+        width: 300px;
+        border-radius: 10px;
+        background-color: black;
+        margin-top: 100px;
+    }
+    .love {
+        height: 100px;
+        width: 100px;
+        margin-left: 70%;
+        margin-bottom: 20%;
+        position: absolute;
+        border-radius: 20px;
+    }
+    .hearts {
+        height: 100px;
+        width: 100px;
+        margin-right: 70%;
+        margin-top: 50%;
+        position: absolute;
+        border-radius: 20px;
+    }
+    body {
+        background: pink;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        }
+    b {
+        position: absolute;
+        margin-top: 100%;
+        font-size: 48px;
 
-
-        </div>
-
-    </div>
-    
-    
-    
-
+    }
+</style>
 </body>
 </html>
-
-
-
-

@@ -6,11 +6,59 @@
     <title>Валентинка</title>
 </head>
 <body>
-    <div class="osn"><b><div class="name">Ты будешь моей валентинкой???</div></b></div>
+    <div id="hiddenBlock" class="hid" onclick="this.style.display='none'" ></div>
+        <img src="Соня.jpg" alt="" class="sonya">
+        <img src="duo.jpg" alt="" class="duo">
+        <div class="osn">
+        <b><div class="name">Ты будешь моей валентинкой???</div></b>
+        <button class="yes" onclick="showBlock()">
+            ДА
+        </button>
+        <button class="no" id="checkBtn">нет</button>
+    </div>
     <img src="love.gif" alt="" class="love">
     <img src="heart.jpg" alt="" class="hearts">
     <b class="loveu"><i>ЛЮБЛЮ ТЕБЯ!</i></b>
 <style>
+    .sonya {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        z-index: 9999;
+        display: none;
+    }
+    .duo {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        display: none;
+    }
+    .hid {
+        background-image: url('Поцелуй.jpg');
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        display: none;
+    }
+    .yes {
+        background:rgb(65, 211, 65);
+        border: 10px green;
+        border-radius: 20%;
+        width: 40%;
+        height: 15%;
+        font-size: 150%;
+        margin-left: 5%;
+    }
+    .no {
+        background:rgb(205, 0, 0);
+        border: 10px green;
+        border-radius: 20%;
+        width: 40%;
+        height: 15%;
+        font-size: 180%;
+        margin-top: 60%;
+        margin-left: 10%;
+    } 
     .name {
         text-align: center;
         font-size: 40px;
@@ -54,7 +102,29 @@
 
     }
 </style>
+<script>
+    const phrases = ["Выбран неправильный ответ, попробуйте еще раз!", "Дорогая, ты промахнулась, попробуй еще раз", "Возможно вы имели в виду 'ДА', попробуйте еще раз", "Error: неверный ответ!"]
+function getRandomPhrase() {
+    const randomIndex = Math.floor(Math.random() * phrases.length);
+    return phrases[randomIndex];
+}
+
+document.getElementById('checkBtn').addEventListener('click', function() {
+    alert(getRandomPhrase());
+});
+function showBlock() {
+    document.getElementById('hiddenBlock').style.display = 'block';
+    document.getElementsByClass('sonya').style.display = 'block';
+    document.getElementsByClass('duo').style.display = 'block';
+    setTimeout(function() {
+        alert('С праздником принцесса моя! Люблю тебя! ❤️');
+    }, 100); // 100 миллисекунд достаточно
+}
+function toggleImage() {
+    const img = document.getElementById('toggleImg');
+    img.style.display = img.style.display === 'none' ? 'block' : 'none';
+}
+</script>
+</script>
 </body>
 </html>
-
-

@@ -7,8 +7,6 @@
 </head>
 <body>
     <div id="hiddenBlock" class="hid" onclick="this.style.display='none'" ></div>
-        <img src="Соня.jpg" alt="" class="sonya">
-        <img src="duo.jpg" alt="" class="duo">
         <div class="osn">
         <b><div class="name">Ты будешь моей валентинкой???</div></b>
         <button class="yes" onclick="showBlock()">
@@ -114,8 +112,6 @@ document.getElementById('checkBtn').addEventListener('click', function() {
 });
 function showBlock() {
     document.getElementById('hiddenBlock').style.display = 'block';
-    document.getElementsByClass('sonya').style.display = 'block';
-    document.getElementsByClass('duo').style.display = 'block';
     setTimeout(function() {
         alert('С праздником принцесса моя! Люблю тебя! ❤️');
     }, 100); // 100 миллисекунд достаточно
